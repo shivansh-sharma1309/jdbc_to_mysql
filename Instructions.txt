@@ -1,0 +1,26 @@
+Below are the commands needed to run before running the Main.java on ppc64le 
+
+1.  Download the jdbc driver for RHEL 
+Ex: wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-8.4.0-1.el9.noarch.rpm
+    A rpm package with name mysql-connector-j-8.4.0-1.el9.noarch.rpm is downloaded 
+
+2.  Install the downloaded jdbc driver 
+Ex: sudo rpm -i mysql-connector-j-8.4.0-1.el9.noarch.rpm
+    This command installs the mysql jdbc driver at location : /usr/share/java/mysql-connector-java.jar
+
+
+3.  Copy the mysql-connector-java.jar file from /usr/share/java folder to your projects root 
+
+
+4.  Compile the Main.java file 
+Ex: javac -cp .:mysql-connector-java.jar Main.java
+    This command creates a compiled bytecode file for you namely Main.class
+
+
+5.  Run the Main.class file including the mysql-connector-java.jar file in classPath 
+Ex: java -cp .:mysql-connector-java.jar Main 
+    This command runs the java code written in Main.java file(which prints the list of tables present in the database)
+
+
+
+    
